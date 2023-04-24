@@ -1,0 +1,59 @@
+﻿@model ProjectModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h4>Create Project</h4>
+<hr />
+
+<div class="row">
+    <div class="d-flex control-label col-md-4 offset-4 border border-secondary rounded pl-5 pr-5 pb-5 justify-content-center pt-5">
+        <form asp-action="Index">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label style="margin-bottom:5px; display:inline-block;">Project Name</label>
+                <input type="text" name="ProjectName" style="margin-left:30px;"/>
+                <br />
+                <span asp-validation-for="ProjectName" class="text-danger"></span>
+            </div><br />
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label style="margin-bottom:5px; display:inline-block;">Description</label>
+                <input type="text" name="Description" style="margin-left:45px;"/>
+                <br />
+                <span asp-validation-for="Description" class="text-danger"></span>               
+            </div><br />
+            <div class="form-group">
+                <label style="margin-bottom:5px; display:inline-block;">Client Name</label>
+                <input type="text" name="ClientName" style="margin-left:38px;"/>
+                <br />
+                <span asp-validation-for="ClientName" class="text-danger"></span>
+            </div><br />
+            <div class="form-group">
+                <label style="margin-bottom:5px; display:inline-block;">Start Date</label>
+                <input type="date" name="StartDate" style="margin-left:55px;" />
+            </div><br />
+            <div class="form-group">
+                <label style="margin-bottom:5px; display:inline-block;">End Date</label>
+                <input type="date" name="EndDate" style="margin-left:60px;" />
+            </div><br />
+            <div class="form-group">
+                <label style="margin-bottom:5px; display:inline-block;">No Of Members</label>
+                <input type="number" name="NoOfMembers" style="margin-left:11px;"  />
+                <br />
+                <span asp-validation-for="NoOfMembers" class="text-danger"></span>
+            </div><br />
+            <div class="form-group">
+                <label style="margin-bottom:5px; display:inline-block;">Project URL</label>
+                <input type="text" name="ProjectURL" style="margin-left:43px;" />
+                <br />
+                <span asp-validation-for="ProjectURL" class="text-danger"></span>
+            </div><br />
+            <div class="form-group">
+                <button type="submit" value="Save" class="btn btn-secondary">Save</button>
+                <button type="reset" onclick="this.form.reset();retrun false" class="btn btn-secondary" style="margin-left:30px">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,64 @@
+﻿<h1>Details</h1>
+
+<table class="table table-bordered table stripped" style="width:100%">
+    <thead>
+        <tr>
+            <th>
+                Project Id
+            </th>
+            <th>
+                Project Name
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Client Name
+            </th>
+            <th>
+                Start Date
+            </th>
+            <th>
+                End Date
+            </th>
+            <th>
+                No Of Members
+            </th>
+            <th>
+                Project Url
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var obj in Model)
+        {
+            <tr>
+                <td width="7%">
+                    @obj.ProjectId
+                </td>
+                <td width="10%">
+                    @obj.ProjectName
+                </td>
+                <td width="15%">
+                    @obj.Description
+                </td>
+                <td width="15%">
+                    @obj.ClientName
+                </td>
+                <td width="10%">
+                    @obj.StartDate.ToString(string.Format("dd/MM/yyyy"))
+                </td>
+                <td width="10%">
+                    @obj.EndDate.ToString(string.Format("dd/MM/yyyy"))
+                </td>
+                <td width="10%">
+                    @obj.NoOfMembers
+                </td>
+                <td width="20%">
+                    @obj.ProjectURL
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
